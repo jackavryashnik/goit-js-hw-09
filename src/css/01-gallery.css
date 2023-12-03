@@ -1,0 +1,28 @@
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 24px 156px;
+  margin: 0 auto;
+  gap: 24px;
+  max-width: calc(360px * 3 + 48px);
+}
+
+.gallery-image {
+  display: block;
+  max-width: 100%;
+  transition: scale 250ms ease;
+}
+
+.gallery-link:hover .gallery-image,
+.gallery-link:focus .gallery-image {
+  scale: 1.045 1.04;
+}
+
+@media screen and (max-width: 700px) {
+  .gallery {
+    padding: 24px 15px;
+  }
+}
