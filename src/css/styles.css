@@ -5,5 +5,5 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./01-gallery.css');
-
+@import url('./gallery.css');
+@import url('./feedback.css');
