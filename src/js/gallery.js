@@ -5,51 +5,57 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const images = [
   {
-    preview: '/goit-js-hw-09/src/img/1.jpg',
-    original: '/goit-js-hw-09/src/img/1@x3.jpg',
-    description: 'developing strategy process',
+    preview: 'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg',
+    original: 'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820_1280.jpg',
+    description: 'Hokkaido Flower',
   },
   {
-    preview: '/goit-js-hw-09/src/img/2.jpg',
-    original: '/goit-js-hw-09/src/img/2@x3.jpg',
-    description: 'light bulb symbolize idea',
+    preview: 'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg',
+    original: 'https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg',
+    description: 'Container Haulage Freight',
   },
   {
-    preview: '/goit-js-hw-09/src/img/3.jpg',
-    original: '/goit-js-hw-09/src/img/3@x3.jpg',
-    description: 'smartphone with slogan on display',
+    preview: 'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg',
+    original: 'https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785_1280.jpg',
+    description: 'Aerial Beach View',
   },
   {
-    preview: '/goit-js-hw-09/src/img/4.jpg',
-    original: '/goit-js-hw-09/src/img/4@x3.jpg',
-    description: 'meeting room',
+    preview: 'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg',
+    original: 'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg',
+    description: 'Flower Blooms',
   },
   {
-    preview: '/goit-js-hw-09/src/img/5.jpg',
-    original: '/goit-js-hw-09/src/img/5@x3.jpg',
-    description: 'rest zone',
+    preview: 'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg',
+    original: 'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334_1280.jpg',
+    description: 'Alpine Mountains',
   },
   {
-    preview: '/goit-js-hw-09/src/img/6.jpg',
-    original: '/goit-js-hw-09/src/img/6@x3.jpg',
-    description: 'coworking space with full seats',
+    preview: 'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571__340.jpg',
+    original: 'https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571_1280.jpg',
+    description: 'Mountain Lake Sailing',
   },
   {
-    preview: '/goit-js-hw-09/src/img/7.jpg',
-    original: '/goit-js-hw-09/src/img/7@x3.jpg',
-    description: 'laptop and coffee',
+    preview: 'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272__340.jpg',
+    original: 'https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg',
+    description: 'Alpine Spring Meadows',
   },
   {
-    preview: '/goit-js-hw-09/src/img/8.jpg',
-    original: '/goit-js-hw-09/src/img/8@x3.jpg',
-    description: 'person working on laptop',
+    preview: 'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255__340.jpg',
+    original: 'https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg',
+    description: 'Nature Landscape',
   },
   {
-    preview: '/goit-js-hw-09/src/img/9.jpg',
-    original: '/goit-js-hw-09/src/img/9@x3.jpg',
-    description: 'meeting',
+    preview: 'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg',
+    original: 'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg',
+    description: 'Lighthouse Coast Sea',
   },
 ];
+
+const options = {
+  overlayOpacity: 0.8,
+  captionsData: 'alt',
+  captionDelay: 250,
+};
 
 const gallery = document.querySelector('.gallery');
 const markup = images
@@ -65,4 +71,4 @@ const markup = images
 
 gallery.insertAdjacentHTML('beforeend', markup);
 
-new SimpleLightbox('.gallery a');
+new SimpleLightbox('.gallery a', options);

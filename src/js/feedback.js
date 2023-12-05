@@ -1,3 +1,4 @@
+import iziToast from 'https://cdn.jsdelivr.net/npm/izitoast@1/+esm';
 const form = document.querySelector('.feedback-form');
 
 function uploadStorageData() {
@@ -25,10 +26,10 @@ function updateInputData() {
   const obj = JSON.parse(localStorage.getItem('feedback-form-state'));
 
   if (obj.email === undefined) {
-    obj.delete(email);
+    delete obj.email;
   }
   if (obj.message === undefined) {
-    obj.delete(message);
+    delete obj.message;
   }
 }
 
@@ -36,6 +37,16 @@ form.addEventListener('submit', event => {
   event.preventDefault();
 
   const obj = JSON.parse(localStorage.getItem('feedback-form-state'));
+
+  if (!obj.email || !obj.message) {
+    iziToast.error({
+      timeout: 5000,
+      position: 'topRight',
+      title: 'Error',
+      message: 'All fields of the form must be filled out',
+    });
+    return;
+  }
 
   form.reset();
   console.log({ email: obj.email, message: obj.message });
